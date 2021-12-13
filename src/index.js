@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import NavBar from "./components/navbar";
 import Card from "./card";
+import Draw from "./draw";
 
 
 import { Layout, Menu } from 'antd';
@@ -25,6 +26,7 @@ class Index extends React.Component {
         <Content style={{ padding: '0 50px', minHeight: "85vh" }}>
           <Routes>
             <Route path="/card" element={<Card />} />
+            <Route path="/draw" element={<Draw />} />
           </Routes>
         </Content>
 
