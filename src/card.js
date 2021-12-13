@@ -9,7 +9,7 @@ import BingoCard from './components/bingoCard';
 
 
 
-class Home extends React.Component {
+class Card extends React.Component {
 
     render = () =>{
         return(
@@ -20,4 +20,4 @@ class Home extends React.Component {
 }
 
 
-export default Home;
+export default Card;

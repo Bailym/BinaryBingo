@@ -3,14 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import NavBar from "./components/navbar";
-import Home from "./home";
+import Card from "./card";
 
 
 import { Layout, Menu } from 'antd';
 
 const { Header, Content, Footer } = Layout;
-
-var navHeaders = ["Home", "About", "Contact"];
 
 class Index extends React.Component {
 
@@ -26,7 +24,7 @@ class Index extends React.Component {
 
         <Content style={{ padding: '0 50px', minHeight: "85vh" }}>
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/card" element={<Card />} />
           </Routes>
         </Content>
 

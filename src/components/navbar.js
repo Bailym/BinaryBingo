@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 
 const { Header } = Layout;
 
-var navHeaders = ["Home", "About", "Contact"];
+var navHeaders = ["Draw", "Card", "About"];
 
 class NavBar extends React.Component {
 
