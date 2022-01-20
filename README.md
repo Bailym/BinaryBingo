@@ -1,15 +1,15 @@
-#React Basics
+# React Basics
 
 React uses the node package manager (npm)
 
-#To start project:
+## To start project:
 Navigate to the project directory in a terminal window. 
 
 `cd BinaryBingo`
 
-`npm start `
+`npm start`
 
-##File Structure
+## File Structure
 - create-react-app handles the initial file structure.
 
 - node_modules - Holds all of the required modules for the app. (if you dont have a node_modules folder run 'npm install'. DO NOT PUSH THIS FOLDER TO GITHUB, USE THE .gitignore to exclude it.)
@@ -23,7 +23,7 @@ Navigate to the project directory in a terminal window.
 - package.lock - similar to above - dont touch it unless you have to.
 
 
-##Inside the src folder (front end files)
+## Inside the src folder (front end files)
 - index.js is always the first page to be shown.
 
 - any smaller components (things that are contained within another page/component) should go in a components folder.
