@@ -2,9 +2,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import { Button, Layout, Menu } from 'antd';
-import BingoCard from './components/bingoCard';
-import { Statistic, Card, Row, Col } from 'antd';
+import { Button } from 'antd';
+
 import { Typography } from 'antd';
 
 const { Title, Paragraph, Text } = Typography;

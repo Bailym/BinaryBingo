@@ -54,7 +54,7 @@ class BingoCard extends React.Component {
         let cards = []
         for (var i = 0; i <= 3; i++) {
             cards.push(<Button onClick={this.changeColour} key={i} className='box' style={{ backgroundColor: "#333" }}>
-                <p>{this.state.numbers[i]}</p>
+                {this.state.numbers[i]}
             </Button>)
         }
 
