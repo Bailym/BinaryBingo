@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import NavBar from "./components/navbar";
-import Card from "./card";  //components from other files.
 import Draw from "./draw";
-
-
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
+import BingoCard from './components/bingoCard';
 
 const { Header, Content, Footer } = Layout;
 
@@ -51,8 +49,9 @@ class Index extends React.Component {
 
         <Content style={{ padding: '0 50px', minHeight: "85vh" }}>
           <Routes>
-            <Route path="/card" element={<Card />} />
+            <Route path="/card" element={<BingoCard />} />
             <Route path="/draw" element={<Draw />} />
+            <Route path="/" element={<Draw />} />
           </Routes>
         </Content>
 
