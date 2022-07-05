@@ -6,9 +6,6 @@ import { Button, Card, List, Typography } from 'antd';
 import Item from 'antd/lib/list/Item';
 const { Title, Paragraph, Text } = Typography;
 
-
-
-
 class Draw extends React.Component {
 
     state = {
