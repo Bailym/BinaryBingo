@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import { Button, Card, List, Typography } from 'antd';
-import Item from 'antd/lib/list/Item';
 const { Title, Paragraph, Text } = Typography;
 
 class Draw extends React.Component {
@@ -43,18 +42,18 @@ class Draw extends React.Component {
 
     render = () => {
         return (
-            <div style={{ width: "50vw", margin: "2vh auto 0 auto", textAlign: "center", justifyItems: "center" }}>
+            <div style={{ width: "80vw", margin: "2vh auto 0 auto", textAlign: "center"}}>
                 <Title>How it Works...</Title>
                 <Paragraph>
-                    <ul style={{ listStyleType: "none", fontSize: "32px" }}>
-                        <li>1. Students should go to the <a href="/card">card</a> page. This will give them a Bingo Card which they can tick off.</li>
-                        <li>2. The teacher clicks the button below and calls out the random 4-bit binary number</li>
-                        <li>3. Students will need to convert the 4-bit binary number into denary</li>
-                        <li>4. If the number appears on a students card they should click the number to tick it off.</li>
-                        <li>5. Repeat this process until a student has all numbers on their card ticked off.</li>
+                    <ul style={{ listStyleType: "none", fontSize: "2.5vw"}}>
+                        <li style={{padding:0, margin:0}}>1. Students should go to the <a href="/card">card</a> page. This will give them a Bingo Card which they can tick off.</li>
+                        <li style={{padding:0, margin:0}}>2. The teacher clicks the button below and calls out the random 4-bit binary number</li>
+                        <li style={{padding:0, margin:0}}>3. Students will need to convert the 4-bit binary number into denary</li>
+                        <li style={{padding:0, margin:0}}>4. If the number appears on a students card they should click the number to tick it off.</li>
+                        <li style={{padding:0, margin:0}}>5. Repeat this process until a student has all numbers on their card ticked off.</li>
                     </ul>
                 </Paragraph>
-                <Text style={{ fontSize: "296px" }}>{this.state.lastNumber}</Text>
+                <Text style={{ fontSize: "10vw" }}>{this.state.lastNumber}</Text>
                 <Button type="primary" style={{ margin: "0 auto 1vh auto", width: "100%", height: "5vh" }} onClick={() => this.getNumber()}>
                     Draw
                 </Button>
@@ -62,6 +61,12 @@ class Draw extends React.Component {
                     grid={{
                         gutter: 16,
                         column: 8,
+                        xs: 1,
+                        sm: 2,
+                        md: 4,
+                        lg: 4,
+                        xl: 8,
+                        xxl: 8,
                     }}
                     dataSource={this.state.numbersCalled}
                     renderItem={(item) => (
@@ -75,6 +80,4 @@ class Draw extends React.Component {
     }
 
 }
-
-
 export default Draw
