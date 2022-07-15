@@ -1,23 +1,21 @@
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { useEffect, useState } from 'react';
 import { Button, Card } from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './bingoCard.css';
 
 
 
+function BingoCard() {
 
+    const [numbers, setNumbers] = useState([]);
+    const [cards, setCards] = useState([]);
 
-class BingoCard extends React.Component {
-    state = {
-        numbers: []
-    }
-
-    componentDidMount = () => {
+    //hook equivalent to componentDidMount() must have [] as the second parameter
+    useEffect(() => {
+        let tempNumbers = [];   //holds the numbers to be added to state
 
         //generate 4 random numbers between 0 and 15    
-        let numbers = [];
         for (let i = 0; i < 4; i++) {
             let randomNumber = Math.floor(Math.random() * 16);
 
@@ -25,19 +23,28 @@ class BingoCard extends React.Component {
             while (numbers.includes(randomNumber)) {
                 randomNumber = Math.floor(Math.random() * 16);
             }
-
             //add to list
-            numbers.push(randomNumber);
+            tempNumbers.push(randomNumber);
         }
+    
+        setNumbers(tempNumbers);    //this wont update immediately. it will wait for the next render.   
+    }, []);
 
-        //update state
-        this.setState({
-            numbers: numbers,
-        });
-    }
+    //when numbers updates on next render.
+    useEffect(() => {
+        //generate a card for each number
+        let tempCards = [];
+        for (var i = 0; i <= 3; i++) {
+            tempCards.push(
+                <Button onClick={changeColour} key={i} className='box' style={{ backgroundColor: "#333" }}>
+                    {numbers[i]}
+                </Button>);
+        }
+        setCards(tempCards)
+    }, [numbers]);
 
     //function to change button to red when clicked and vice versa
-    changeColour = (e) => {
+    function changeColour(e) {
         let button = e.target;
         let currentColour = button.style.backgroundColor;
 
@@ -49,26 +56,14 @@ class BingoCard extends React.Component {
         }
     }
 
-    render = () => {
-        //create a card for each number
-        let cards = []
-        for (var i = 0; i <= 3; i++) {
-            cards.push(<Button onClick={this.changeColour} key={i} className='box' style={{ backgroundColor: "#333" }}>
-                {this.state.numbers[i]}
-            </Button>)
-        }
-
-        //render the bingo card
-        return (
-            <div className='container'>
-                {cards}
-            </div>
-        )
-
-    }
+    //render the bingo card
+    return (
+        <div className='container'>
+            {cards}
+        </div>
+    )
 
 }
-
 
 export default BingoCard;
 
