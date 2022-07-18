@@ -1,0 +1,94 @@
+.draw-container {
+    width: 80vw;
+    text-align: "center";
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    margin: auto;
+}
+
+#back-icon {
+    display:inline;
+    max-width: 5rem;
+    margin: 0 0 4rem 0;
+}
+
+#collapse-icon {
+    display:inline;
+    max-width: 5rem;
+    margin: 0 0 4rem 15vw;
+}
+
+h1 {
+    display: inline;
+    text-align: center;
+}
+
+#rules-div {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto 5rem auto;
+}
+
+#rules-div ul {
+    list-style-type: none;
+    font-size: 2rem;
+    margin:auto;
+}
+
+#rules-div ul li {
+    padding: 0;
+    margin: 0;
+}
+
+#draw-div {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+}
+/* left column */
+#numbers-list {
+    flex: 1;
+    padding:1rem
+}
+
+/* middle column */
+#draw-controls {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* right column (blank - used for spacing */
+#column-3 {
+    flex: 1;
+    padding:1rem
+}
+
+/* contents of middle column */
+#draw-controls h2 {
+    margin: auto;
+    flex:1;
+    text-align: center;
+    font-size: 25rem;
+    line-height: 25rem;
+    color: #000000;
+}
+
+.draw-button {
+    font-family: "Josefin Sans", sans-serif;
+    padding: 3rem 20%;
+    border: 8px solid #000000;
+    box-shadow: 10px 10px 0px #000000;
+    transform: rotate(-2.15deg);
+    margin: 0 auto;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 4rem;
+    background-color: #00FFF0;
+    color: #fff;
+    flex:1;
+}
