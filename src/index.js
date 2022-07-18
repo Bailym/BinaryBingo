@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import NavBar from "./components/navbar";
-import Draw from "./draw";
+import NavBar from "./NavBar/navBar";
+import Draw from "./Draw/draw";
 import { Layout } from 'antd';
-import BingoCard from './components/bingoCard';
+import BingoCard from './BingoCard/bingoCard';
+import LandingPage from './LandingPage/landingPage';
 
 const { Header, Content, Footer } = Layout;
 
@@ -21,7 +22,7 @@ function Index() {
         <Routes>
           <Route path="/card" element={<BingoCard />} />
           <Route path="/draw" element={<Draw />} />
-          <Route path="/" element={<Draw />} />
+          <Route path="/" element={<LandingPage />} />
         </Routes>
       </Content>
       <Footer style={{ textAlign: 'center', minHeight: "5vh" }}>
