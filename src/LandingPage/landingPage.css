@@ -1,0 +1,40 @@
+.landing-div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+h1 {
+    color: #000;
+}
+
+.landing-button {
+    font-family: "Josefin Sans", sans-serif;
+    padding: 5rem 20rem;
+    border: 8px solid #000000;
+    box-shadow: 10px 10px 0px #000000;
+    transform: rotate(-2.15deg);
+    margin: 0 0 2rem 0;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 4rem;
+}
+
+.landing-button-red {
+    background: #FF0000;
+    margin-top: 15vh;
+}
+
+.landing-button-blue {
+    background: #0066FF;
+}
+
+.landing-button a {
+    color: #fff;
+}

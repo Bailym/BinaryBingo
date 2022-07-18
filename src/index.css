@@ -1,0 +1,10 @@
+.layout {
+    background-color: #F4D9A3;
+    min-height: 100vh;
+}
+
+.footer {
+    background-color: #F4D9A3;
+    min-height: 5vh;
+    text-align: center;
+}
