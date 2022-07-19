@@ -45,9 +45,12 @@ function Draw() {
 
     return (
         <div className="draw-container">
-            <a href={process.env.PUBLIC_URL + "/"}><img id='back-icon' src={process.env.PUBLIC_URL + "/BackArrow.png"} alt="back to landing page" /></a>
-            <img id='collapse-icon' src={process.env.PUBLIC_URL + "/TriangleOpen.png"} alt="collapse rules" />
-            <h1>HOW IT WORKS.</h1>
+            <div id="title-div">
+                <a href={process.env.PUBLIC_URL + "/"}><img id='back-icon' src={process.env.PUBLIC_URL + "/BackArrow.png"} alt="back to landing page" /></a>
+                <h1>HOW IT WORKS.</h1>
+                <div className='column-3'></div>
+            </div>
+
             <div id="rules-div">
                 <ul>
                     <li>1. Students should go to the <a href="/card">card</a> page. This will give them a Bingo Card which they can tick off.</li>
@@ -57,6 +60,7 @@ function Draw() {
                     <li>5. Repeat this process until a student has all numbers on their card ticked off.</li>
                 </ul>
             </div>
+
             <div id="draw-div">
                 <div id="numbers-list">
 
@@ -65,7 +69,7 @@ function Draw() {
                     <h2>{lastNumber}</h2>
                     <button className='draw-button' onClick={() => getNumber()}> Draw</button>
                 </div>
-                <div id="column-3">
+                <div className="column-3">
 
                 </div>
                 {/* <List
