@@ -1,10 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { Button, Card } from 'antd';
-import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './bingoCard.css';
-
-
 
 function BingoCard() {
 
@@ -20,13 +16,13 @@ function BingoCard() {
             let randomNumber = Math.floor(Math.random() * 16);
 
             //stop duplicate numbers
-            while (numbers.includes(randomNumber)) {
+            while (tempNumbers.includes(randomNumber)) {
                 randomNumber = Math.floor(Math.random() * 16);
             }
             //add to list
             tempNumbers.push(randomNumber);
         }
-    
+
         setNumbers(tempNumbers);    //this wont update immediately. it will wait for the next render.   
     }, []);
 
@@ -36,9 +32,9 @@ function BingoCard() {
         let tempCards = [];
         for (var i = 0; i <= 3; i++) {
             tempCards.push(
-                <Button onClick={changeColour} key={i} className='box' style={{ backgroundColor: "#333" }}>
+                <button onClick={changeColour} key={i} className='box'>
                     {numbers[i]}
-                </Button>);
+                </button>);
         }
         setCards(tempCards)
     }, [numbers]);
@@ -48,19 +44,42 @@ function BingoCard() {
         let button = e.target;
         let currentColour = button.style.backgroundColor;
 
-        if (currentColour === "rgb(255, 0, 0)") {
-            button.style.backgroundColor = "rgb(51, 51, 51)";
+        console.log(currentColour)
+
+        //if pink, change to white
+        if (currentColour === "rgb(251, 97, 189)") {
+            button.style.backgroundColor = "rgb(255,255,255)";
+            button.style.color = 'rgb(235, 235, 235)'
         }
+        //else change to pink.
         else {
-            button.style.backgroundColor = "rgb(255, 0, 0)";
+            button.style.backgroundColor = "rgb(251, 97, 189)";
+            button.style.color = 'rgb(255, 255, 255)'
         }
     }
 
     //render the bingo card
     return (
-        <div className='container'>
-            {cards}
+        <div className="card-div">
+            <div id="title-div">
+                <a href={process.env.PUBLIC_URL + "/"}><img id='back-icon' src={process.env.PUBLIC_URL + "/BackArrow.png"} alt="back to landing page" /></a>
+                <h1>HOW IT WORKS.</h1>
+                <div className='column-3'></div>
+            </div>
+
+            <div id="rules-div">
+                <ul>
+                    <li>1. The teacher will call out a random 4-bit binary number</li>
+                    <li>2. Students will need to convert the 4-bit binary number into denary</li>
+                    <li>3. If the number appears on your card below, click the number to tick it off.</li>
+                    <li>4. Repeat. If you tick off all numbers on your card call out 'BINGO'.</li>
+                </ul>
+            </div>
+            <div className='card-container'>
+                {cards}
+            </div>
         </div>
+
     )
 
 }
