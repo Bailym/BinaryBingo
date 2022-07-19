@@ -18,14 +18,12 @@
 /* left of title - contains back-icon */
 #title-div a {
     flex: 1;
-    border: 1px solid red;
     text-align: center;
 }
 
 /* right of title - contains h1 and collapse-icon */
 #title-div h1 {
     flex: 5;
-    border: 1px solid blue;
     text-align: center;
     font-size: clamp(2rem, 5vw, 5rem);
     margin: 0;
@@ -44,8 +42,7 @@
 }
 
 #rules-div {
-    margin: 0 auto 1rem auto;
-    border: 1px solid black;
+    margin: 0 auto 5vw auto;
     text-align: center;
 }
 
@@ -71,7 +68,6 @@
 #numbers-list {
     flex: 1;
     padding:1rem;
-    border: 1px solid blue;
 }
 
 /* middle column */
@@ -79,14 +75,12 @@
     flex: 5;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
 }
 
 /* right column (blank - used for spacing */
 .column-3 {
     flex: 1;
     padding:1rem;
-    border: 1px solid green;
 }
 
 /* contents of middle column */
@@ -94,7 +88,7 @@
     margin: auto;
     flex:1;
     text-align: center;
-    font-size: clamp(10rem, 15vw, 30rem);
+    font-size: clamp(10rem, 40vw, 25rem);
     line-height: 25rem;
     color: #000000;
 }
@@ -118,7 +112,7 @@
 @media screen and (max-width: 640px) {
     .draw-button {
         padding: 3rem 5%;
-        margin: 0;;
+        margin: 0;
     }
 
     
