@@ -39,6 +39,8 @@ Students can click the box to mark it as called.
 
 Repeat until a student ticks off all four numbers or no more numbers can be called.
 
+![Image 1](https://github.com/Bailym/BinaryBingo/blob/main/images/BinaryBingo%205.png)
+
 ![Image 1](https://github.com/Bailym/BinaryBingo/blob/main/images/BinaryBingo%206.png)
 
 
