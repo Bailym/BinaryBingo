@@ -17,6 +17,10 @@
 
 **How to Play**
 
+Landing Page
+
+![Image 0](https://github.com/Bailym/BinaryBingo/blob/main/images/BinaryBingo%200.png?raw=true)
+
 Teacher uses the Draw page.
 
 ![Image 1](https://github.com/Bailym/BinaryBingo/blob/main/images/BinaryBingo%201.png)
