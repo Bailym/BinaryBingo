@@ -1,16 +1,16 @@
 
-import React from 'react';
-import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import { useEffect, useState } from 'react';
 import "./draw.css";
-import { Button, Card, List, Typography } from 'antd';
-const { Title, Paragraph, Text } = Typography;
+
 
 
 function Draw() {
 
     //state hooks
-    const [numbersCalled, setNumbersCalled] = React.useState([]);
-    const [lastNumber, setLastNumber] = React.useState("1111");
+    const [numbersCalled, setNumbersCalled] = useState([]);
+    const [lastNumber, setLastNumber] = useState("");
+    const [numberComponents, setNumberComponents] = useState([]);
+    const [numsHidden, setNumsHidden] = useState(false);
 
     //pads a binary number with zeros to the left since 0001 is a valid binary number etc.
     function pad(str, max) {
@@ -43,6 +43,17 @@ function Draw() {
         }
     }
 
+    //when numberscalled changes, this function is called.
+    useEffect(() => {
+        let newComponent = <li className='numbers-list-item'>{lastNumber}</li>
+        setNumberComponents(numberComponents => [...numberComponents, newComponent]);
+    }, [numbersCalled]);
+
+
+    function toggleHideNums() {
+        setNumsHidden(!numsHidden);
+    }
+
     return (
         <div className="draw-container">
             <div id="title-div">
@@ -63,53 +74,22 @@ function Draw() {
 
             <div id="draw-div">
                 <div id="numbers-list-div">
-                    <h3>Numbers Called</h3>
-                    <ul id="numbers-list">
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item'>0000</li>
-                        <li className='numbers-list-item hide-list'>[HIDE]</li>
-                    </ul>
-
+                    {!numsHidden ?
+                        <ul id="numbers-list">
+                            <h3>Numbers Called</h3>
+                            {numberComponents}
+                            <li className='numbers-list-item hide-list' onClick={() => toggleHideNums()}>[HIDE]</li>
+                        </ul> :
+                        <p onClick={() => toggleHideNums()} id="open-numbers-list">[Show]</p>}
                 </div>
+
                 <div id="draw-controls">
-                    <h2>{lastNumber}</h2>
+                    <h2>{lastNumber !== "" ? lastNumber : "????"}</h2>
                     <button className='draw-button' onClick={() => getNumber()}> Draw</button>
                 </div>
                 <div className="column-3">
 
                 </div>
-                {/* <List
-                grid={{
-                    gutter: 16,
-                    column: 8,
-                    xs: 1,
-                    sm: 2,
-                    md: 4,
-                    lg: 4,
-                    xl: 8,
-                    xxl: 8,
-                }}
-                dataSource={numbersCalled}
-                renderItem={(item) => (
-                    <List.Item>
-                        <Card>{item}</Card>
-                    </List.Item>
-                )}
-            /> */}
             </div>
         </div>
     )
