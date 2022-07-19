@@ -1,3 +1,7 @@
+h1, h2, h3 {
+    font-weight: 700;
+}
+
 .draw-container {
     width: 80vw;
     text-align: "center";
@@ -65,10 +69,41 @@
     justify-content: center;
 }
 /* left column */
-#numbers-list {
+#numbers-list-div {
     flex: 1;
-    padding:1rem;
+    border: 8px solid #000000;
+    box-shadow: 10px 10px 0px #000000;
 }
+
+#numbers-list-div h3 {
+    text-align: center;
+    font-size: 2rem;
+    background-color: #FF3F3F;
+    margin: 0;
+}
+
+#numbers-list {
+    list-style-type: none;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 1rem;
+}
+
+.numbers-list-item{
+    line-height: 1em;
+    font-size: clamp(0.5rem, 5vw, 2rem);
+    text-align: center;
+}
+
+.hide-list {
+    font-size: 1rem;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    color: #FF3F3F;
+    cursor: pointer;
+}
+
+
 
 /* middle column */
 #draw-controls {
@@ -81,6 +116,7 @@
 .column-3 {
     flex: 1;
     padding:1rem;
+    
 }
 
 /* contents of middle column */

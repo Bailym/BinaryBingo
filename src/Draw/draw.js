@@ -62,7 +62,27 @@ function Draw() {
             </div>
 
             <div id="draw-div">
-                <div id="numbers-list">
+                <div id="numbers-list-div">
+                    <h3>Numbers Called</h3>
+                    <ul id="numbers-list">
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item'>0000</li>
+                        <li className='numbers-list-item hide-list'>[HIDE]</li>
+                    </ul>
 
                 </div>
                 <div id="draw-controls">
