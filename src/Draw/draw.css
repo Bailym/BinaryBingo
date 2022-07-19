@@ -88,6 +88,7 @@ h1, h2, h3 {
     height: fit-content;
     border: 8px solid #000000;
     box-shadow: 10px 10px 0px #000000;
+    padding:0
 }
 
 .numbers-list-item{
@@ -167,6 +168,5 @@ h1, h2, h3 {
     #numbers-list-div {
         order: 2;
         margin: 3rem 0;
-        font-size: ;
     }
 }
