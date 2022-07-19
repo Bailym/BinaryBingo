@@ -6,10 +6,10 @@ function LandingPage() {
     <div className="landing-div">
         <h1>BINARY BINGO.</h1>
         <button className="landing-button landing-button-red">
-            <Link to="/Draw">Teacher</Link>
+            <a href={process.env.PUBLIC_URL + "/Draw"}>Teacher</a>
         </button>
         <button className="landing-button landing-button-blue">
-            <Link to="/Card">Student</Link>
+            <a href={process.env.PUBLIC_URL + "/Card"}>Student</a>
         </button>
       
     </div>
