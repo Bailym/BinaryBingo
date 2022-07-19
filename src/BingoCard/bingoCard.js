@@ -32,7 +32,7 @@ function BingoCard() {
         let tempCards = [];
         for (var i = 0; i <= 3; i++) {
             tempCards.push(
-                <button onClick={changeColour} key={i} className='box'>
+                <button onClick={changeColour} key={i} className='box' style={{backgroundColor: "rgb(251, 97, 189)"}}>
                     {numbers[i]}
                 </button>);
         }
@@ -42,9 +42,7 @@ function BingoCard() {
     //function to change button to red when clicked and vice versa
     function changeColour(e) {
         let button = e.target;
-        let currentColour = button.style.backgroundColor;
-
-        console.log(currentColour)
+        let currentColour = button.style.backgroundColor
 
         //if pink, change to white
         if (currentColour === "rgb(251, 97, 189)") {

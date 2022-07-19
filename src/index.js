@@ -14,7 +14,7 @@ const { Header, Content, Footer } = Layout;
 
 function Index() {
   return (
-    <Router>
+    <Router basename='BinaryBingo'>
       <Layout className="layout">
         {/* <Header style={{ minHeight: "5vh" }}>
           <NavBar />
