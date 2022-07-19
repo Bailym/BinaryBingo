@@ -91,7 +91,7 @@ h1, h2, h3 {
 
 .numbers-list-item{
     line-height: 1em;
-    font-size: clamp(0.5rem, 5vw, 2rem);
+    font-size: clamp(1rem, 5vw, 2rem);
     text-align: center;
 }
 
@@ -150,6 +150,16 @@ h1, h2, h3 {
         padding: 3rem 5%;
         margin: 0;
     }
+}
 
-    
+@media screen and (max-width: 1280px){
+    #draw-div {
+        flex-direction: column;
+    }
+
+    #numbers-list-div {
+        order: 2;
+        margin: 3rem 0;
+        font-size: ;
+    }
 }
