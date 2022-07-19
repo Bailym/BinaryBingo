@@ -1,7 +1,7 @@
 
 ## Binary Bingo 
 
-**Live here: https://binary-bingo.herokuapp.com/**
+**Live here: https://bailym.github.io/BinaryBingo/**
 
 **Summary**
 - React.js Front End
