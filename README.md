@@ -5,7 +5,7 @@
 
 **Summary**
 - React.js Front End
-- Antd Component Library
+- Neubrutalism design
 - HTML, CSS, JS based frameworks.
 
 **Features**
