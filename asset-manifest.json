@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/BinaryBingo/static/css/main.c1e470c3.chunk.css",
+    "main.js": "/BinaryBingo/static/js/main.ce53c07d.chunk.js",
+    "main.js.map": "/BinaryBingo/static/js/main.ce53c07d.chunk.js.map",
+    "runtime-main.js": "/BinaryBingo/static/js/runtime-main.c9eec998.js",
+    "runtime-main.js.map": "/BinaryBingo/static/js/runtime-main.c9eec998.js.map",
+    "static/css/2.0ce74623.chunk.css": "/BinaryBingo/static/css/2.0ce74623.chunk.css",
+    "static/js/2.8e3148d3.chunk.js": "/BinaryBingo/static/js/2.8e3148d3.chunk.js",
+    "static/js/2.8e3148d3.chunk.js.map": "/BinaryBingo/static/js/2.8e3148d3.chunk.js.map",
+    "index.html": "/BinaryBingo/index.html",
+    "static/css/2.0ce74623.chunk.css.map": "/BinaryBingo/static/css/2.0ce74623.chunk.css.map",
+    "static/css/main.c1e470c3.chunk.css.map": "/BinaryBingo/static/css/main.c1e470c3.chunk.css.map",
+    "static/js/2.8e3148d3.chunk.js.LICENSE.txt": "/BinaryBingo/static/js/2.8e3148d3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c9eec998.js",
+    "static/css/2.0ce74623.chunk.css",
+    "static/js/2.8e3148d3.chunk.js",
+    "static/css/main.c1e470c3.chunk.css",
+    "static/js/main.ce53c07d.chunk.js"
+  ]
+}
