@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import "./draw.css";
+import {Link} from 'react-router-dom';
 
 
 
@@ -64,7 +65,7 @@ function Draw() {
 
             <div id="rules-div">
                 <ul>
-                    <li>1. Students should go to the <a href={process.env.PUBLIC_URL + "/card"}>card</a> page. This will give them a Bingo Card which they can tick off.</li>
+                    <li>1. Students should go to the <Link to="/card">card</Link> page. This will give them a Bingo Card which they can tick off.</li>
                     <li>2. The teacher clicks the button below and calls out the random 4-bit binary number</li>
                     <li>3. Students will need to convert the 4-bit binary number into denary</li>
                     <li>4. If the number appears on a students card they should click the number to tick it off.</li>
